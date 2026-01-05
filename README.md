@@ -71,6 +71,7 @@ naqsh-resort/
 └── requirements.txt    # Project Dependencies
 ```
 
-🔮 Future Roadmap
+## 🔮 Future Roadmap
+
 [ ] Admin Panel to update room prices without coding.
 [ ] Calendar blocking to prevent double bookings.
