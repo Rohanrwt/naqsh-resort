@@ -73,5 +73,5 @@ naqsh-resort/
 
 ## 🔮 Future Roadmap
 
-[ ] Admin Panel to update room prices without coding.
-[ ] Calendar blocking to prevent double bookings.
+- [ ] Admin Panel to update room prices without coding.
+- [ ] Calendar blocking to prevent double bookings.
