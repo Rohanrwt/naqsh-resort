@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naqsh Resort | Rishikesh</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/" class="logo">Naqsh Resort</a>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/availability">Book Now</a></li>
+          <li><a href="/gallery">Gallery</a></li>
+          <li><a href="/corporate">Groups</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>{% block content %} {% endblock %}</main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2026 Naqsh Resort, Mohanchatti.</p>
+        <p><strong>Call for Group Bookings:</strong> +91 XXXXX XXXXX</p>
+      </div>
+    </footer>
+  </body>
+</html>

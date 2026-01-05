@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="container" style="margin-top: 40px">
+  <h1 style="text-align: center">Moments at Naqsh</h1>
+  <p style="text-align: center; color: #666; margin-bottom: 40px">
+    A glimpse into the peace that awaits you.
+  </p>
+
+  <div class="gallery-grid">
+    {% for photo in photos %}
+    <div class="gallery-item">
+      <img
+        src="{{ url_for('static', filename='images/' + photo.src) }}"
+        alt="{{ photo.caption }}"
+      />
+      <div class="overlay">{{ photo.caption }}</div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div style="text-align: center; margin: 60px 0">
+    <h3>Like what you see?</h3>
+    <a href="/availability" class="btn-primary">Book Your Stay Now</a>
+  </div>
+</div>
+
+{% endblock %}

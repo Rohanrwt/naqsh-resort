@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block content %}
+
+<header class="hero">
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <h1>Escape to the Mountains</h1>
+      <p>Riverside calm. Unmatched privacy. Pure nature.</p>
+      <a href="/availability" class="btn-primary">Check Availability</a>
+    </div>
+  </div>
+</header>
+
+<section class="container">
+  <h2 style="text-align: center; margin-bottom: 30px">Our Sanctuary</h2>
+  <div class="room-grid">
+    {% for room in rooms %}
+    <div class="room-card">
+      <div class="room-img-container">
+        <img
+          src="{{ url_for('static', filename='images/' + room.image) }}"
+          alt="{{ room.name }}"
+        />
+      </div>
+
+      <div class="room-details">
+        <h3>{{ room.name }}</h3>
+        <p class="desc">{{ room.description }}</p>
+        <div class="price-tag">
+          Starts at <strong>₹{{ room.price_weekday }}</strong> / night
+        </div>
+        <a href="/availability" class="btn-secondary">Book This Room</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}
